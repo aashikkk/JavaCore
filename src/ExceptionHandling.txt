@@ -1,0 +1,202 @@
+### Session 1
+Exception Handling:
+1) What is Exception
+
+Exception is the one, which makes your program to travel in abnormal route.
+
+EXCEPTION:
+    Which makes our program to travel in abnormal route and makes the program to stop abruptly.
+
+Complile time la nadantha JDK responsible
+Runtime la nadantha JVM responsible.
+
+Whenever Exception occurs, JVM will throw a corresponding Exception object.
+
+Whenever abnormal event occurs, an object which is causing that abnormal event will be thrown.
+
+1) Who will throw? JVM will throw
+2) To Whom? Developer.
+
+Object --> States and behavior,
+       --> Memory Reference of a class
+
+Class --> Template / Blueprint.
+
+Without object, we have a class = True
+Without class, we have a Object = False
+
+Error - Compilation la nadakurathu. (Syntax error, StackOverflowError)
+        Memory Error - Server
+
+STACK - First In Last Out
+Stack Trace
+Those exceptions line.
+
+First letter Capital la iruntha Class/ Interface
+ArithmeticException --- Class
+java.lang --> Object, String
+
+
+
+
+### Session 3
+
+Exception Handling:
+
+        Scanner sc = new Scanner(System.in);
+        int no1 = sc.nextInt();  //5
+        int no2 = sc.nextInt();  //0
+
+        int result = no1/no2;  // Infinity
+        System.out.println(result);
+
+        Then we will have an error
+
+Java --> OOP
+JVM --> Object --> Class
+JVM epavum Object theditu irukum work seyya and eppavum Object iruntha Class irukum athuku.
+
+Exception:
+    Whenever exception occurs, the corresponding exception object will be thrown.
+
+Exception Object --> Throwable
+
+Throwable Class have 2 Subclasses.
+1) Error
+2) Exception
+
+A throwable contains a snapshot of the execution stack of its thread at the time it was created.
+
+It can also contain a message string that gives more information about the error.
+1) Stack snapshot (la enga prblm - line no
+2) Exception name
+3) Message string
+4) try catch(Exception obj)
+
+Stack trace--
+
+Exception in thread "main" java.lang.ArithmeticException: / by zero
+	at ExceptionHandlDemo.divide(ExceptionHandlDemo.java:24)
+	at ExceptionHandlDemo.main(ExceptionHandlDemo.java:6)
+
+
+
+Error:
+An Error is a subclass of Throwable that indicates serious problems that a reasonable application should not try to catch.
+Most such errors are abnormal conditions.
+// Out of memory
+
+
+Exception:
+The class Exception and its subclasses are a form of Throwable that indicates conditions that a reasonable application
+might want to catch.
+//User will be reason
+
+
+RuntimeException and its subclasses are unchecked exceptions. Unchecked means Run(time) pannumpothu tan therium
+
+----
+try{
+bike.start();
+}
+catch(StartingTrouble st)
+{
+}
+catch(Puncture p){
+}
+catch(NoPetrol np){
+}
+catch(Friend f){
+}
+finally{
+// Code cleaning process
+// DB Closure
+}
+
+Here multiple response for different types of exceptions.
+
+try - catch block/ finally block/ catch and finally block
+
+try block should be accompanied by catch or finally or both block.
+
+finally block will always be called irrespective of Exception occurs or not.
+
+catch block will be called only when corresponding Exception object is thrown.
+
+Exception Hierarchy
+Sub Classes Exception kodutha piraku than Base class Exception pokanum,
+
+///// 5 Keywords
+try - catch - finally - throw - throws
+
+User defined Exception
+
+1)What is exception
+2) Exception Class Hierarchy - Base class Throwable
+3) Throwable
+4) Error and Exception
+5) Checked Exception, Unchecked Exception
+6) Exception stack trace
+7) try catch finally
+8) Exception catch hierarchy
+
+
+### Session 2
+
+Java Exception is an object which describes an exceptional condition that happened in our code.
+
+Whenever exception conditions occur, program behaves abnormally and it gets stopped.
+Whenever exception conditions occur, an object representing the exception is created and thrown
+by JVM.
+
+try
+{
+// Exception possible area
+// Code for monitoring
+}
+catch (Exception e)
+{
+// Exception handling block
+}
+
+Exception in thread "main"?????
+
+ArrayIndexOutOfBoundsException
+
+Inheritance Concept:
+
+
+Throwable Class
+||                  ||
+Exception           Error
+||
+RuntimeException
+
+1) try block should have catch block.
+If we dont give catch block after try, we end up with
+"Syntax error, insert "Finally" to complete TryStatement"
+
+2) try block should have catch block or finally block or both.
+
+3) catch vs finally --> Difference
+
+4) finally block will always be executed irrespective of Exception occurs or not.
+catch block will get executed only when corresponding exception occurs.
+
+What is the purpose of finally block?
+--  finally keyword is designed to address contingency.
+
+finally:
+1) DB Closure
+2) Shared Resources
+
+finally should be present after try block only when there is no catch block.
+If there is any catch block, finally should be present after try catch block.
+
+Order:
+try -- catch -- finally
+
+### Session 4(3)
+
+At last, we can give exception Base class
+

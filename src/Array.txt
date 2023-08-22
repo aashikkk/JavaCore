@@ -1,0 +1,53 @@
+   Array:=> Collection of similar data types.
+   Symbol --> []
+
+   Why should I learn Array
+   -> To avoid multiple variables usage /declaration
+
+   When I should use array?
+   Whenever I want to store more values, I can go with arrays
+
+   How I should use array?
+   -> [] is used. There are two ways to create array.
+
+   int[] marks = {90, 89, 78};
+   boolean[] results = {true, false, true};
+   char[] name = {"a", "b", "c", "d"};               // These are primitive data types - 8 Primitive types
+   float[] values = {1.3f, 2.2f};
+
+   Non-primitive Data types arrays:=> Every class we have/create
+
+   String[] names = {"ahali", "mane"}
+
+   Employee emp1 = new Employee();
+   Employee emp2 = new Employee();
+   Employee emp3 = new Employee();
+   Employee emp4 = new Employee();
+
+   Employee[] emp = {emp1,emp2,emp3,emp4}  --> From employee class, USER DEFINED ARRAY
+
+   When we want to create undefined data with array
+   int[] marks = new int[6];   | | | | | | |           We have 6 boxes with initial 0 value.
+
+        equivalent to ====
+
+   mark1 = ??
+   mark2 = ?? until mark6 (Memory space 6 marks = array marks with [6] memory)
+
+   1) In arrays, values will be stored continuously
+   2) Array will have their own default value based on their datatype.
+   For example, int array will have 0 as default value.
+   for float - 0.0 ,  for boolean - false.
+
+   Array is index based.
+   int[] marks = {80, 90, 100};
+   Array Element: No. of elements --> 3
+   Index starts from 0 and ends at (length-1) 2
+
+   Java Understanding;
+   marks[0] = 80;
+   marks[1] = 90;
+   marks[2] = 100;
+
+   retainAll(l)  --> keep l only
+   https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html

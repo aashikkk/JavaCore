@@ -1,0 +1,60 @@
+String
+- is immutable. which means a constant and cannot be edited once created.
+- Literal
+
+There are two ways to create string in Java:
+
+String literal
+    String s = “GeeksforGeeks”;
+Using new keyword
+    String s = new String (“GeeksforGeeks”);
+
+ *** for-each loop
+- It's only forward directed. -- Unidirectional
+
+ String[] names = {"A","B", "C};
+ for (String name:names){
+    System.out.println(name);
+ }
+
+ for each String name in names.
+
+ So here how String works. (By Immutable case)
+ sentence = "";                     l1
+ sentence = "Aashik";               l2
+ sentence = "AashikMohamed";        l3
+ sentence = "AashikMohamedAhamed";
+
+ So here, l1,l2 and l3 will collected by Garbage Collector. Here,it seems like we are wasting memory.
+ If we make String as mutable here, then no need to waste memory right.
+ Where StringBuilder/StringBuffer comes in....
+
+
+StringBuffer is mutable
+    - Thread Safe
+    - all methods are synchronized methods.
+
+StringBuilder is mutable
+So here, one object will be created. We can ensure by using hashCode().
+
+        StringBuffer sb = new StringBuffer("");
+        for (String name:names){
+            sb.append(name);
+            System.out.println("StringBuffer hashCode" +sb.hashCode()); --> Check hashCode
+        }
+        System.out.println(sb);
+
+add, replace,remove ---> Available methods
+** StringBuilder and StringBuffer are same. but different is Thread Safe
+
+### StringBuffer
+A thread-safe, mutable sequence of characters. A string buffer is like a String, but can be modified.
+String buffers are safe for use by multiple threads. The methods are synchronized where necessary so that all the
+operations on any particular instance behave as if they occur in some serial order that is consistent with the order
+of the method calls made by each of the individual threads involved.
+
+### StringBuilder
+A mutable sequence of characters. This class provides an API compatible with StringBuffer, but with no guarantee
+of synchronization.
+
+--> MultiThread Environment

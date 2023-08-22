@@ -1,0 +1,15 @@
+Nested Loop
+
+Looping  -> Repeated Action
+
+You should write inner loop first, and afterward
+think about outer loop
+
+EX:
+    1 1 1 1 1   ----> Inner Loop, U need to build this line first then think about below lines. that will be outer loop
+    1 1 1 1 1
+    1 1 1 1 1
+    1 1 1 1 1
+
+    So, Inner loop --> no of columns
+        Outer loop --> no of rows.

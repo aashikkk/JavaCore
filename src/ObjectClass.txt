@@ -1,0 +1,21 @@
+Object --> java.lang.Object class
+
+Java --> Object --> Base class object --> static,non static,local variable, object, method
+method overriding, subclass, extends
+
+Class - OOP Concepts.. Thats why every class support OOP
+
+Abc apdi oru class iruntha by default athu extends Object Class
+public class Abc extends Object() {}
+It's like AdamEve. we will not write. but belongs to.
+
+Inheritance??
+
+An object of one class acting as an object of another class.
+
+Parent                  Child ch = new Child();
+
+Child object will behave like Parent Object as well.
+
+Abc abc = new Abc();
+abc.    // Here abc object can access the Object class methods.

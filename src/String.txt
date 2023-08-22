@@ -1,0 +1,72 @@
+String is a class
+
+1) package --> java.lang
+2) public static void main(String[] args)
+3) String is immutable - Special property
+4) Without new keyword, we can create objects for string
+5) As usual, we can create objects for String using new keyword.
+Two choices ..
+
+Whenever we creating objects, constructers will get called automatically.
+Constructor theriyama object create panna aelathu. It means Parameterized constructor or 0 arguments
+constructer aa endu theriyanum.
+
+//        What is happening here??
+//        When we call s obj of String class there is no Hashcode. but
+//        When we use sd obj of StringDemo class there is "package name + class + hashCode"
+
+//        Why this??
+//        Object Class is parent class of all Classes. There is a method called toString(). It will automatically call
+//        toString() when we write println();
+
+//        public String toString(){
+//          return "package name + class +"@"+ hashCode(hd)"
+//        }
+
+//        But you can ask we also call println in String class right?
+//        Yes, valid question.
+//        Because String class override the toString() method THERE. That's the Special attribute of String class.
+
+//        Ex: When we call through String class
+//        public String toString(){
+//          return ""
+//        }
+
+        /*
+        * Print Stream
+        *
+        * println(Object o){
+        *   return o.toString();
+        * }
+        * */
+
+//        Kind of thing happening
+
+----------------------------------------------------------------
+Comparing two integers
+int no1 = 5;
+int no2 = 6;
+if (no1 == no2){
+    sout(..)
+}
+
+Comparing two Objects. We can't compare two objects like that..
+m1.equals(m2); --> Can compare only like this.
+Direct aa compare panna aela. but can compare attributes/features. like that
+
+Ex: if(m1.equals(m2)){} // equals call panrathu --> m1. argument --> m2
+
+We can override if we want
+
+public boolean equals(Object o) {
+    return true;
+}
+
+public int hashCode() {
+    return 123;
+}
+
+public String toString() {
+    return "Hi";
+}
+

@@ -1,0 +1,44 @@
+Collection --> an object that represents a group of objects
+
+Box -> Pencil, Ruler, Pen
+
+Framework --> Spring Springboot Hibernate
+
+collections framework is a unified architecture for representing and manipulating collections, enabling collections to
+be manipulated independently of implementation details.
+
+Reduces programming effort
+Increases performance
+Fosters software reuse
+
+API -> Application Programming Interface
+
+Collection interfaces:
+Set, List, Map
+
+Implementation Classes:
+
+Legacy Java Stack Vector
+
+Concurrent - Simultaneously
+
+Interfaces - Classes
+
+package: java.util
+
+java.util.Collection
+java.util.Map
+
+Iteration --> looping
+Iterable - reiterate
+
+Collection:
+Set: Ex: Ven Diagram pola
+1)No Duplicates Allowed
+2) No order is maintained
+
+List: Grocery List
+1) Duplicate elements are allowed
+2) Insertion order is maintained
+
+ArrayList -> Resizable-array implementation of the list interface.
