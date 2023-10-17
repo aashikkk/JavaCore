@@ -1,0 +1,49 @@
+Multi Threading:
+
+Concurrency
+
+systems can do more than one thing at a time
+
+processes and threads
+
+Multiprocessing: OS
+Multithreading: Lightweighted, is a subset of Multiprocessing
+
+-----------------------
+
+Multitasking: Doing many tasks at same time using different processes
+Multiple processes
+
+JVM: Single process
+Concurrency
+
+Doing many tasks at same time inside a single process
+
+Single thread: Doing only one task(Job)
+
+----------
+go();
+
+go(){                       get Balance();
+buy();                      pay();
+}                           buy();
+buy(){                      go();
+pay();                                          STACK - First in Last Out - FILO
+}
+pay(){
+getBalance();
+}
+
+------------
+try(){
+    sout(10/0);
+}
+catch(Exception e)  {
+    e.printStackTrace();
+}
+
+--------------
+How to achieve thread class
+
+1) By extending thread class
+2) By implementing runnable interface

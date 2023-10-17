@@ -200,3 +200,90 @@ try -- catch -- finally
 
 At last, we can give exception Base class
 
+Hierarchy of catch:
+At first, we should catch all child class exceptions. Only then, we can catch parent class exceptions.
+
+Nested try catch is possible in Java.
+
+try
+{
+    try
+    {
+
+    }
+    catch (Exception e){
+
+    }
+
+}
+catch (Exception e){
+
+}
+
+printStackTrace()
+Present in Throwable class. It prints the stack trace of the exception.
+getMessage()
+Gives the description of the exception
+
+Using OR in catch
+
+        try{
+        int no1=5, no2 = 0, no3= -5;
+        int result = no1/no2;
+        int[] array = new int[no3];
+        }
+        catch (ArithmeticException | NegativeArraySizeException e){
+            System.out.println(e.getMessage());
+            System.out.println("check check");
+        }
+
+throws
+- throws is a keyword given in Method Signature after method name.
+- after throws, we can give Exception class names (n number) with comma separation
+
+Types of Exceptions
+
+1) Checked Exception --
+    We should have Checked Exception during Compile time itself. Otherwise
+    will end up with error message
+
+2) Unchecked Exception --
+    Exception thrown during run time
+Eg:
+RuntimeException - Arithmetic,ArrayIndex, NegativeArraySize
+
+public void divide() throws Exception {
+}
+ipdi oru class la kodukakola innoru class la
+ed.divide(); endu call panna error varum (Checked Exception)
+
+adatha try - catch kodukalam.
+OR
+adatha throws um kodukalam. (Call panra method la throws kodukanum)
+
+### Session 5 (4)
+
+try - catch - finally - throws - throw
+
+throw - User Defined Exception
+    Explicitly throwing Exception object.
+
+Rules:
+1) Should be a sub class of Exception or Throwable.
+2) Java Conventions - Name of every exception class should end with 'Exception'
+
+
+PasswordeException extends Exception
+
+CheckedException na kattayam throws kodukanum.
+
+Exception --> Checked Exception             Unchecked Exception
+              FileNotFoundException
+RuntimeException -                           Arithmetic, Array, Negat
+
+
+throws                                      throw
+throws is mentioned in method signature     throw is mentioned in method body
+after throws, we can give any no. of        After throw, we can mention only one exception object
+Exception classes
+Mainly for predefined exceptions.           throw is mainly used for User Defined Exception

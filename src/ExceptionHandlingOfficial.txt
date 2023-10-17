@@ -1,0 +1,85 @@
+What Is an Exception?
+An exception is an event that occurs during the execution of a program that disrupts the normal flow of instructions.
+
+https://docs.oracle.com/javase/tutorial/essential/exceptions/index.html
+
+
+Advantages of Exception:
+
+Advantage 1: Separating Error-Handling Code from "Regular" Code
+
+readFile {
+    open the file;
+    determine its size;
+    allocate that much memory;
+    read the file into memory;
+    close the file;
+}
+At first glance, this function seems simple enough, but it ignores all the following potential errors.
+
+What happens if the file can't be opened?
+What happens if the length of the file can't be determined?
+What happens if enough memory can't be allocated?
+What happens if the read fails?
+What happens if the file can't be closed?
+
+
+// Beauty of an exception
+
+readFile {
+    try {
+        open the file;
+        determine its size;
+        allocate that much memory;
+        read the file into memory;
+        close the file;
+    } catch (fileOpenFailed) {
+       doSomething;
+    } catch (sizeDeterminationFailed) {
+        doSomething;
+    } catch (memoryAllocationFailed) {
+        doSomething;
+    } catch (readFailed) {
+        doSomething;
+    } catch (fileCloseFailed) {
+        doSomething;
+    }
+}
+
+
+Advantage 2: Propagating Errors Up the Call Stack
+// ExceptionHandlDemo5.java
+
+
+method1 {
+    try {
+        call method2;
+    } catch (exception e) {
+        doErrorProcessing;
+    }
+}
+
+method2 throws exception {
+    call method3;
+}
+
+method3 throws exception {
+    call readFile;
+}
+
+
+Advantage 3: Grouping and Differentiating Error Types
+
+Using multiple cache set..
+
+
+
+Error vs Exception
+errors and exceptions represent different types of problems that can occur during program execution.
+Errors are usually caused by serious problems that cannot be recovered from, while exceptions are
+used to handle recoverable errors within a program.
+
+Checked                           Unchecked Exceptions
+
+If a client can reasonably be expected to recover from an exception, make it a checked exception. If a client cannot
+do anything to recover from the exception, make it an unchecked exception.
